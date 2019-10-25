@@ -1,7 +1,7 @@
 package main
 
 import (
-    "card/cmd/build"
+    "cmd/build"
     "flag"
     "fmt"
     "os"

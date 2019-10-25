@@ -37,7 +37,7 @@ func (d *DatabaseConf)GetMysqlConfigStr() string {
 }
 
 func (d *DatabaseConf) GetMysqlConf() *DatabaseConf {
-    configer, e := config.NewConfig("ini", "../conf/database.conf")
+    configer, e := config.NewConfig("ini", "./conf/database.conf")
     if e != nil {
         fmt.Println(e)
         os.Exit(-1)
