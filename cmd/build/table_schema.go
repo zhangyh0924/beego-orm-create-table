@@ -17,7 +17,7 @@ func NewTableSchema() *TableSchema {
 
 func (this *TableSchema) GetAll(tableName string) []orm.Params {
     query := orm.NewOrm()
-    sql := "SELECT TABLE_NAME,TABLE_COMMENT FROM `TABLES` WHERE TABLE_SCHEMA='card'"
+    sql := "SELECT TABLE_NAME,TABLE_COMMENT FROM `TABLES` WHERE TABLE_SCHEMA='"+NewDatabaseConf().GetMysqlConf().Database+"'"
     if tableName != "" {
         sql += " AND TABLE_NAME='" + tableName + "'"
     }

@@ -32,7 +32,7 @@ func NewDatabaseConf() *DatabaseConf  {
 
 func (d *DatabaseConf)GetMysqlConfigStr() string {
     d.GetMysqlConf()
-    mysqlstr := d.UserName + ":" + d.Password + "@tcp(" + d.Host + ":" + d.Port + ")/" + d.Database + "?charset=" + d.Charset
+    mysqlstr := d.UserName + ":" + d.Password + "@tcp(" + d.Host + ":" + d.Port + ")/information_schema?charset=" + d.Charset
     return mysqlstr
 }
 
