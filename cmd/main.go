@@ -12,7 +12,7 @@ var buildFile *build.Build
 
 func init() {
     buildFile = build.NewBuild()
-    flag.BoolVar(&h, "h", false, "生成表的名称");
+    flag.BoolVar(&h, "h", false, "帮助");
     flag.StringVar(&buildFile.TableName, "t", "", "生成表的名称");
     flag.StringVar(&buildFile.Path, "p", "", "文件保存路径");
     flag.BoolVar(&buildFile.IsFileHump, "m", false, "文件是否驼峰 true false 默认false");
